@@ -1,9 +1,9 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp2/pages/home.dart';
-import 'package:fooddeliveryapp2/pages/order.dart';
-import 'package:fooddeliveryapp2/pages/profile.dart';
-import 'package:fooddeliveryapp2/pages/wallet.dart';
+import 'package:food_app/pages/home.dart';
+import 'package:food_app/pages/order.dart';
+import 'package:food_app/pages/profile.dart';
+import 'package:food_app/pages/wallet.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
@@ -24,10 +24,10 @@ class _BottomNavState extends State<BottomNav> {
 
   @override
   void initState() {
-    homepage = Home();
-    order = Order();
-    profile = Profile();
-    wallet = Wallet();
+    homepage = const Home();
+    order = const Order();
+    profile = const Profile();
+    wallet = const Wallet();
     pages = [homepage, order, wallet, profile];
     super.initState();
   }
@@ -39,13 +39,13 @@ class _BottomNavState extends State<BottomNav> {
           height: 65,
           backgroundColor: Colors.white,
           color: Colors.black,
-          animationDuration: Duration(milliseconds: 500),
+          animationDuration: const Duration(milliseconds: 500),
           onTap: (int index) {
             setState(() {
               currentTabIndex = index;
             });
           },
-          items: [
+          items: const [
             Icon(
               Icons.home_outlined,
               color: Colors.white,

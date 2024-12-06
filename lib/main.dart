@@ -1,18 +1,18 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
-import 'package:fooddeliveryapp2/admin/admin_login.dart';
-import 'package:fooddeliveryapp2/admin/home_admin.dart';
-import 'package:fooddeliveryapp2/pages/bottomnav.dart';
-import 'package:fooddeliveryapp2/pages/home.dart';
-import 'package:fooddeliveryapp2/pages/login.dart';
-import 'package:fooddeliveryapp2/pages/onboard.dart';
-import 'package:fooddeliveryapp2/pages/signup.dart';
-import 'package:fooddeliveryapp2/widget/app_constant.dart';
+import 'package:food_app/admin/admin_login.dart';
+import 'package:food_app/admin/home_admin.dart';
+import 'package:food_app/pages/bottomnav.dart';
+import 'package:food_app/pages/home.dart';
+import 'package:food_app/pages/login.dart';
+import 'package:food_app/pages/onboard.dart';
+import 'package:food_app/pages/signup.dart';
+import 'package:food_app/widget/app_constant.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  Stripe.publishableKey = publishableKey;
+  // Stripe.publishableKey = publishableKey;
   await Firebase.initializeApp();
   runApp(const MyApp());
 }
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: AdminLogin());
+        home: const AdminLogin());
   }
 }
 

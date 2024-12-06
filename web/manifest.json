@@ -1,6 +1,6 @@
 {
-    "name": "fooddeliveryapp2",
-    "short_name": "fooddeliveryapp2",
+    "name": "food_app",
+    "short_name": "food_app",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

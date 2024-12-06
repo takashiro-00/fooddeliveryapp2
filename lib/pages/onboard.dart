@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fooddeliveryapp2/pages/signup.dart';
-import 'package:fooddeliveryapp2/widget/content_model.dart';
-import 'package:fooddeliveryapp2/widget/widget_support.dart';
+import 'package:food_app/pages/signup.dart';
+import 'package:food_app/widget/content_model.dart';
+import 'package:food_app/widget/widget_support.dart';
 
 class Onboard extends StatefulWidget {
   const Onboard({super.key});
@@ -43,8 +43,8 @@ class _OnboardState extends State<Onboard> {
                 },
                 itemBuilder: (_, i) {
                   return Padding(
-                    padding:
-                        EdgeInsets.only(top: 40.0, left: 20.0, right: 20.0),
+                    padding: const EdgeInsets.only(
+                        top: 40.0, left: 20.0, right: 20.0),
                     child: Column(
                       children: [
                         Image.asset(
@@ -53,14 +53,14 @@ class _OnboardState extends State<Onboard> {
                           width: MediaQuery.of(context).size.width,
                           fit: BoxFit.fill,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 40.0,
                         ),
                         Text(
                           contents[i].title,
                           style: AppWidget.HeadlineTextFeildStyle(),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20.0,
                         ),
                         Text(
@@ -84,23 +84,23 @@ class _OnboardState extends State<Onboard> {
           GestureDetector(
             onTap: () {
               if (currentIndex == contents.length - 1) {
-                Navigator.pushReplacement(
-                    context, MaterialPageRoute(builder: (context) => SignUp()));
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => const SignUp()));
               }
               _controller.nextPage(
-                  duration: Duration(milliseconds: 100),
+                  duration: const Duration(milliseconds: 100),
                   curve: Curves.bounceIn);
             },
             child: Container(
               decoration: BoxDecoration(
                   color: Colors.red, borderRadius: BorderRadius.circular(20)),
               height: 60,
-              margin: EdgeInsets.all(40),
+              margin: const EdgeInsets.all(40),
               width: double.infinity,
               child: Center(
                 child: Text(
                   currentIndex == contents.length - 1 ? "Start" : "Next",
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: Colors.white,
                       fontSize: 20.0,
                       fontWeight: FontWeight.bold),
@@ -117,7 +117,7 @@ class _OnboardState extends State<Onboard> {
     return Container(
       height: 10.0,
       width: currentIndex == index ? 18 : 7,
-      margin: EdgeInsets.only(right: 5),
+      margin: const EdgeInsets.only(right: 5),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(6), color: Colors.black38),
     );
